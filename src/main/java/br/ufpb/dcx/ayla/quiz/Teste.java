@@ -5,6 +5,7 @@ public class Teste {
         System.out.println("Oi");
         Pergunta pergunta = new PerguntaDissertativa();
         System.out.println(pergunta.toString());
+        System.out.println("TESTe token");
     }
 
 }
