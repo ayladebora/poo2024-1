@@ -2,7 +2,7 @@ package br.ufpb.dcx.ayla.artesanato;
 
 import java.util.Objects;
 
-public class ItemDeArtesanato  implements Comparable<ItemDeArtesanato> {
+public abstract class ItemDeArtesanato  implements Comparable<ItemDeArtesanato> {
     private String codigo;
     private String nome;
     private double preco;
@@ -20,6 +20,8 @@ public class ItemDeArtesanato  implements Comparable<ItemDeArtesanato> {
     public String getCodigo() {
         return codigo;
     }
+
+    public abstract String getDescricao();
 
     public void setCodigo(String codigo) {
         this.codigo = codigo;
@@ -69,5 +71,13 @@ public class ItemDeArtesanato  implements Comparable<ItemDeArtesanato> {
 //            return 1;
 //        }
         return (int) (this.preco - o.getPreco());
+    }
+
+    @Override
+    public String toString() {
+        return "ItemDeArtesanato de " +
+                "codigo '" + codigo + '\'' +
+                ", nome '" + nome + '\'' +
+                ", e preco " + preco;
     }
 }
