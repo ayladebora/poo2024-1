@@ -20,7 +20,7 @@ public class SistemaFeiraArtesanatoRioTinto implements SistemaFeiraArtesanato{
             if (item.getCodigo().startsWith(PREFIXO_CODIGO)){
                 this.itensDeArtesanato.put(item.getCodigo(), item);
             } else {
-               // throw new CodigoInvalidoException("Código não começa com o prefixo "+PREFIXO_CODIGO);
+                throw new CodigoInvalidoException("Código não começa com o prefixo "+PREFIXO_CODIGO);
             }
 
         }
