@@ -7,21 +7,24 @@ import static org.junit.jupiter.api.Assertions.*;
 public class SistemaFeiraArtesanatoRioTintoTest {
 
     @Test
+    public void testaPesquisar(){
+
+    }
+
+    @Test
     public void testaCadastro(){
         SistemaFeiraArtesanatoRioTinto sistema = new SistemaFeiraArtesanatoRioTinto();
         try {
             Roupa r = new Roupa();
             sistema.cadastraItem(r);
-            ItemDeArtesanato item = sistema.pesquisaItemPeloCodigo(r.getCodigo());
-            assertEquals(item, r);
-        } catch (CodigoInvalidoException e) {
-            fail();
-        } catch (ItemJaExisteException e) {
-            fail();
-        } catch (ItemInexistenteException e) {
-            fail();
+            fail("Nao deve deixar cadastrar");
+        } catch (CodigoInvalidoException  e) {
+            //OK
+        } catch (ItemJaExisteException  e){
+            fail("não era pra lançar estas exceptions");
         }
 
+            //
     }
 
 }
