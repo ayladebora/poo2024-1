@@ -8,7 +8,7 @@ public class SistemaFeiraArtesanatoRioTintoTest {
 
     @Test
     public void testaPesquisar(){
-
+//TODO
     }
 
     @Test
